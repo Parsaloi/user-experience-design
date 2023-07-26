@@ -1,0 +1,27 @@
+.pageTitle {
+	color: green;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-shadow: 4px 4px 5px gray;
+	text-align: center;
+}
+
+.pageSubTitle {
+	color: red;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1.25rem;
+	text-shadow: 2px 2px 2.5px gray;
+	text-align: center;
+}
+
+.ownerForm {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align: center
+	width: 300px;
+	height: 200px;
+	border: 1px solid #ccc;
+	padding: 10px;
+}

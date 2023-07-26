@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 	<head>
+		<meta charset="utf-8" />
 		<title>Log in Page</title>
 		<link rel="icon" type="image/x-icon" href="images/icons/vetDoc.ico">
+		<link rel="stylesheet" href="static/main.css">
 	</head>
 	<body>
 		<div class="pageTitle">
-		<h2>Olngarua Agrovet</h2>
+			<h2>Olngarua Agrovet</h2>
 		</div>
 
 		<div class="pageSubTitle">
-		<h3>The login form is next to build</h3>
+			<h3>The login form is next to build</h3>
 		</div>
+
+			<form class="ownerForm">
+				<label for="name">Owner's Name:</label>
+				<input type="text" id="name" name="name"
+				required minlength="8" maxlength="16" size="10">
+			</form>
 	</body>
 </html>
 

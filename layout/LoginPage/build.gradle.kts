@@ -31,6 +31,8 @@ dependencies {
   implementation(platform("io.vertx:vertx-stack-depchain:$vertxVersion"))
   implementation("io.vertx:vertx-config")
   implementation("io.vertx:vertx-web")
+  // implementation("org.slf4j:slf4j-api:2.0.7")
+  implementation("ch.qos.logback:logback-classic:1.2.3")
   // testImplementation("io.vertx:vertx-junit5")
   // testImplementation("org.junit.jupiter:junit-jupiter:$junitJupiterVersion")
 }

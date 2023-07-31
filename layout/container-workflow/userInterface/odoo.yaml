@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: odoo-erp
+spec:
+  selector:
+    matchLabels:
+      app: odoo-erp
+      department: vet
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: odoo-erp
+        department: vet
+    spec:
+      containers:
+        - name: odoo-erp
+          image: docker.io/odoo:16.0
+          env:
+            - name: "PORT"
+              value: "30000"

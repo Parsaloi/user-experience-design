@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ui-service
+spec:
+  type: ClusterIP
+  # Uncomment the below line to create a Headless Service
+  # clusterIP: None
+  selector:
+    app: ui-app
+    departments: vet-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

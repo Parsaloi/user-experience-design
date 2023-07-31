@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-ui
+spec:
+  selector:
+    matchLabels:
+      app: web-ui
+      department: vet-service
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: web-ui
+        department: vet-service
+    spec:
+      containers:
+        - name: ui-app
+          image: docker.io/creatorp/ui-app:latest
+          env:
+            - name: "PORT"
+              value: "50002"

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ui-app
+spec:
+  selector:
+    matchLabels:
+      app: ui-app
+      department: vet-service
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: ui-app
+        department: vet-service
+    spec:
+      containers:
+        - name: ui-app
+          image: docker.io/creatorp/ui-app:latest

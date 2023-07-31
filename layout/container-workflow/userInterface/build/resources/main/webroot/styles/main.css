@@ -1,0 +1,106 @@
+.pageTitle {
+	color: crimson;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 2.5rem;
+	font-weight: bolder;
+	text-shadow: 4px 4px 5px gray;
+	text-align: center;
+}
+
+.pageTitle div {
+	font-size: 1.25rem;
+	font-style:italic;
+}
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 500px;
+	margin: 0 auto;
+}
+
+
+.sidebar {
+	/*float: left;*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 400px;
+	height: 100%;
+	background-color: #lightgreen;
+	box-shadow: 0 0 10px #ccc;
+	z-index: 10;
+}
+
+
+
+
+.login {
+	display: flex;
+	flex-direction: column;
+	flex: 550;
+	justify-content: space-around;
+	align-content: center;
+	background-color: #teal;
+	border-radius: 30px;
+	width: 100%;
+	box-shadow: 0 0 10px #ccc;
+}
+
+.credentials div {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.loginButton {
+	background-color: #fff;
+	color: #f54;
+	padding: 10px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 60%;
+}
+
+@keyframes wiggle {
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(-10deg);
+	}
+	20% {
+		transform: rotate(0deg);
+	}
+	30% {
+		transform: rotate(10deg);
+	}
+	40% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(-10deg);
+	}
+	60% {
+		transform: rotate(0deg);
+	}
+	70% {
+		transform: rotate(10deg);
+	}
+	80% {
+		transform: rotate(0deg);
+	}
+	90% {
+		transform: rotate(-10deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}

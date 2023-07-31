@@ -19,35 +19,18 @@ public class MainVerticle extends AbstractVerticle {
 
 	  Router router = Router.router(vertx);
 
-	  router.route().handler(StaticHandler.create("resources/webroot/"));
+	  router.route().handler(StaticHandler.create("resources/webroot"));
 	  router.get("/*").handler(ctx -> ctx.reroute("/index.html"));
 
 	  vertx.createHttpServer()
 		  .requestHandler(router)
-		  .listen(8888);
-
-
-
-	  /*
-	   * Version 1.0
-	  // Instantiate a Http server
-	  HttpServer server = vertx.createHttpServer();
-
-
-	  // Instantiate a Router object
-	  Router router = Router.router("/resources/webroot");
-
-	  // Associate the router with a handler
-	  router.route().handler(StaticHandler.create("resources/webroot"));
-	  router.get("/*").handler(ctx -> ctx.reroute("/index.html"));
-
-	  server.requestHandler(router).listen(8081, http -> {
-		  if (http.succeeded()) {
-			  System.out.println("HTTP Server started on port 8081");
-		  } else {
-			  startPromise.fail(http.cause());
-		  }
-	  });
-	  */
+		  .listen(8081, http -> {
+			  if (http.succeeded()) {
+				  startPromise.complete();
+				  System.out.println("Vert.x server started at port 8081");
+			  } else {
+				  startPromise.fail(http.cause());
+			  }
+		  });
   }
 }

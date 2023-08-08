@@ -19,7 +19,7 @@ public class MainVerticle extends AbstractVerticle {
 
 	  Router router = Router.router(vertx);
 
-	  router.route().handler(StaticHandler.create("resources/webroot"));
+	  router.route().handler(StaticHandler.create("webroot"));
 	  router.get("/*").handler(ctx -> ctx.reroute("/index.html"));
 
 	  vertx.createHttpServer()

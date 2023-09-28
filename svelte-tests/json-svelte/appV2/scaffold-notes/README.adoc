@@ -1,0 +1,48 @@
+== Managing JavaScript projects
+
+```bash
+# Create a simple JS project
+mkdir -p my-rollup-project/src
+cd my-rollup-project
+
+# Create a entry point to our project
+# // src/main.js
+import foo from './foo.js';
+export default function() {
+  console.log(foo);
+}
+
+# Create foo.js
+# // src/foo.js
+export default 'hello rollupjs';
+
+# Create the project bundle
+rollup src/main.js -f cjs
+src/main.js → stdout...
+'use strict';
+
+// src/foo.js
+var foo = 'hello rollupjs!';
+
+// src/main.js
+function main() {
+        console.log(foo);
+}
+
+module.exports = main;
+```
+
+> The `-f` option (short for `--format`) specifies what kind of bundle we are creating - in this case, `CommonJS` (which will run in `Node.js`).  
+Since we did not specify an output file, it will be printed straight to `stdout`
+
+```bash
+# bundle up
+rollup src/main.js --format cjs > bundle.js
+src/main.js → stdout...
+```
+
+
+
+
+
+

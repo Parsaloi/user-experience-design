@@ -1,0 +1,46 @@
+
+== Getting started with Svelte JavaScript
+
+- Setup npm registry package manager tool; `pnpm`
+
+```bash
+pnpm setup                                                                                                                                                                           1 ✘ 
+# Add it to you system path
+```
+
+- Using vanilla Svelte.js to scaffold a project
+
+```bash
+pnpm create svelte@latest demo-app
+
+.../share/pnpm/store/v3/tmp/dlx-32637    |   +6 +
+.../share/pnpm/store/v3/tmp/dlx-32637    | Progress: resolved 6, reused 0, downloaded 6, added 6, done
+
+create-svelte version 5.1.0
+
+┌  Welcome to SvelteKit!
+│
+◇  Which Svelte app template?
+│  Skeleton project
+│
+◇  Add type checking with TypeScript?
+│  Yes, using JavaScript with JSDoc comments
+│
+◇  Select additional options (use arrow keys/space bar)
+│  none
+│
+└  Your project is ready!
+
+✔ Type-checked JavaScript
+```
+
+- Creating a project bundle using `rollupjs`:  
+
+```bash
+# First install the dependencies
+
+pnpm install rollup --global
+...
+
+# 
+```

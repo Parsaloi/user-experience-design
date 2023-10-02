@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Loading Highcharts from CDN-->
+	<script> src="https://code.highcharts.com/10/highcharts.js"</script>
+	<title>Metrics Chart</title>
+</head>
+<body>
+	<!--Add a div element in my page. Assign it an id and set a specific width and height which will be the width and height of my chart-->
+	<div> id="container" style="width:100%; height:400px;"</div>
+
+	<!--A chart is initialized by adding the JavaScript tag, 'script', anywhere in a webpage, containing the following code. The div from #1 is reffered in the contructor-->
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const chart = Highcharts.chart('container', {
+				chart: {
+					type: 'bar'
+				},
+				title: {
+					text: 'Fruit Consumption'
+				},
+				xAxis: {
+					categories: ['Apples', 'Bananas', 'Oranges']
+				},
+				yAxis:{
+					title: {
+						text: 'Fruit eaten'
+					}
+				},
+				series: [{
+					name: 'Jane',
+					data: [1, 0, 4]
+				}, {
+					name: 'John',
+					data: [5, 7, 3]
+				}]
+			});
+		});
+	</script>
+
+</body>
+</html>
